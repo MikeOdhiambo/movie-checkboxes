@@ -1,0 +1,104 @@
+*, *::before, *::after{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+body{
+	width: 100vw;
+	height: 90vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 1rem;
+}
+.container {
+	width: 40%;
+	display: flex;
+	flex-direction: column;
+}
+.container > h1 {
+	font-size: 1.8rem;
+	text-align: center;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	font-weight: 400;
+	margin: 1rem 0;
+}
+.categories {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 2rem;
+	padding: 1rem;
+	border-radius: 0.6rem;
+	border: 2px solid rgba(0, 0, 0, 0.15);
+}
+label{
+	position: relative;
+	width: clamp(5rem, 7rem, 10rem);
+	height: clamp(5rem, 7rem, 10rem);
+	border-radius: 0.6rem;
+	box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
+	transition: all 0.2s ease-in-out;
+}
+label:hover, label:active{
+	transform: scale(1.05);
+}
+input[type='checkbox'] {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	opacity: 0;
+}
+.check-item-logo {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 0.5rem;
+	border-radius: 0.6rem;
+}
+.check-item-logo p{
+	width: 80%;
+	font-family: 'Courier New', Courier, monospace;
+	font-size: 0.85rem;
+	font-weight: bold;
+	text-align: center;
+}
+input:checked ~ .check-item-logo{
+	box-shadow: rgba(4,217,255, 0.5) 0px 0px 0px 1px, rgb(4,217,255) 0px 0px 0px 1px inset;
+	background-color: rgba(173, 216, 230, 0.4);
+}
+.nxt-page{
+	margin: 1rem 0 0 auto;
+	text-align: center;
+	padding: 0.5rem;
+	border-radius: 0.6rem;
+}
+.nxt-page > a{
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	gap: 0.5rem;
+}
+.nxt-page span{
+	font-size: 1.5rem;
+}
+.nxt-page:hover{
+	color: blue;
+}
+
+@media screen and (max-width: 1023px) {
+  .container {
+		width: 75%;
+	}
+}
